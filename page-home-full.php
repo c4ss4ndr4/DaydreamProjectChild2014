@@ -14,20 +14,20 @@ get_header(); ?>
     <div class="row">
      <?php
               $linksPosts = new WP_Query();
-			  	$linksPosts->query('post_type=page&post_parent=872&orderby=menu_order&order=DEC&post_number=3&posts_per_page=3'); //* Live Code *
-              //$linksPosts->query('post_type=page&post_parent=909&orderby=menu_order&order=DEC&post_number=3&posts_per_page=3'); //* Local Code *
+			  	//$linksPosts->query('post_type=page&post_parent=872&orderby=menu_order&order=DEC&post_number=3&posts_per_page=3'); //* Live Code *
+              $linksPosts->query('post_type=page&post_parent=909&orderby=menu_order&order=DEC&post_number=3&posts_per_page=3'); //* Local Code *
           ?>
         
           
           <?php while ($linksPosts->have_posts()) : $linksPosts->the_post(); ?>
          
-            <?php if ( has_post_thumbnail( $post_id ) === true ) 
+            <?php if ( has_post_thumbnail() === true ) 
                 {
               
               echo '<a href="';
               echo the_permalink();
               echo '">'; 
-              echo get_the_post_thumbnail( $post_id, $size, $attr ); 
+              echo get_the_post_thumbnail(); 
               echo '</a>';
               echo '<br />';
               //echo the_title();
@@ -65,21 +65,21 @@ get_header(); ?>
     <div class="row">
      <?php
               $linksPosts = new WP_Query();
-			  	$linksPosts->query('post_type=page&post_parent=868&orderby=menu_order&order=DEC&post_number=3&posts_per_page=3'); //*Live Code
-              //$linksPosts->query('post_type=page&post_parent=911&orderby=menu_order&order=DEC&post_number=3&posts_per_page=3'); //*Local Code
+			  	//$linksPosts->query('post_type=page&post_parent=868&orderby=menu_order&order=DEC&post_number=3&posts_per_page=3'); //*Live Code
+              $linksPosts->query('post_type=page&post_parent=911&orderby=menu_order&order=DEC&post_number=3&posts_per_page=3'); //*Local Code
           ?>
         
           
           <?php while ($linksPosts->have_posts()) : $linksPosts->the_post(); ?>
          
-            <?php if ( has_post_thumbnail( $post_id ) === true ) 
+            <?php if ( has_post_thumbnail() === true ) 
                 {
               echo '<div class="large-4 columns four">';
               echo '<div class="servicesSection">';
               echo '<a href="';
               echo the_permalink();
               echo '">'; 
-              echo get_the_post_thumbnail( $post_id, $size, $attr ); 
+              echo get_the_post_thumbnail(); 
               echo '</a>';
               echo '<br />';
               //echo the_title();
@@ -155,21 +155,21 @@ get_header(); ?>
     
 		  <?php
               $linksPosts = new WP_Query();
-			  $linksPosts->query('post_type=page&post_parent=12&orderby=menu_order&order=DEC&post_number=3&posts_per_page=3'); //*Live
-              //$linksPosts->query('post_type=page&post_parent=12&orderby=menu_order&order=DEC&post_number=3&posts_per_page=3'); //*Local
+			  //$linksPosts->query('post_type=page&post_parent=12&orderby=menu_order&order=DEC&post_number=3&posts_per_page=3'); //*Live
+              $linksPosts->query('post_type=page&post_parent=12&orderby=menu_order&order=DEC&post_number=3&posts_per_page=3'); //*Local
           ?>
         
           
           <?php while ($linksPosts->have_posts()) : $linksPosts->the_post(); ?>
          
-            <?php if ( has_post_thumbnail( $post_id ) === true ) 
+            <?php if ( has_post_thumbnail( ) === true ) 
                 {
               echo '<div class="large-4 columns four">';
               echo '<div class="workSection">';
               echo '<a href="';
               echo the_permalink();
               echo '">'; 
-              echo get_the_post_thumbnail( $post_id, $size, $attr ); 
+              echo get_the_post_thumbnail(); 
               echo '</a>';
               echo '<br />';
 			  	echo '<h3>';
