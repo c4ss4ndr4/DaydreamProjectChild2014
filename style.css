@@ -1,0 +1,239 @@
+/*
+Theme Name: Daydream Project Reverie Child Theme
+Description: Child theme for the Reverie
+Author: Cassandra Marshall
+Template: reverie
+*/
+ 
+@import url("../reverie/style.css");
+ 
+/* Start child theme customization below */
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	
+	background-size: 100%;
+	background-position: bottom;
+	background-image:url(bgs/square_bg.png);
+}
+
+h1.lobster{
+	font-family: 'Lobster', cursive;
+}
+
+h1.entry-title{
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.jobTitle{
+	font-family: 'Josefin Slab', serif;
+	
+}
+
+h1.josefinSlab, h2.josefinSlab, h3.josefinSlab, h4.josefinSlab, h5.josefinSlab, h6.josefinSlab, h7.josefinSlab{
+	font-family: 'Josefin Slab', serif;
+}
+
+
+p{
+ 	color: #333333;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, h7{
+	font-family: 'Ubuntu', sans-serif;	
+}
+
+
+a:link, a:hover, a:visited, a:active{
+	color: #7b578c;	
+	
+}
+
+a:hover{
+	background-color: #c4418f;	
+	
+}
+
+a.button{
+	color: #ffffff;
+	
+}
+
+
+.clients, a.clients{
+	/*margin-left: 70%;	
+	/*margin-right: 30%;*/
+	text-align:right;
+	background-color: transparent;	
+	
+}
+
+/* Layout */
+.top-bar{
+	margin-bottom: -20px;	
+	background-color: #000000;
+}
+
+.top-bar .name h1 a{
+	letter-spacing: 6px;
+	background-color: #000000;
+}
+
+.tagLineHome{
+	text-align: center;	
+	margin: 50px 0 50px 0;
+	text-shadow: -1.5px -1.5px 2px #c8c6c6;
+	/*border-bottom: #c8c6c6 1px solid;
+	border-top: #c8c6c6 1px solid;*/
+}
+
+.container{
+	
+}
+
+.skills {
+	margin: 50px 0 150px 0;
+	
+}
+
+.servicesSection{
+	text-shadow: -1.5px -1.5px 2px #c8c6c6;
+	
+}
+
+.customWork, a.customWork{
+	font-family: 'Ubuntu', sans-serif;
+    	/* Shadows are visible under slightly transparent text color 
+   	color: rgba(0,134,121, 0.8);*/
+	color: rgba(239,77,174, 0.4);
+    	text-shadow: 1px 4px 6px rgba(239,77,174, 0.4), 0 0 0 #000, 1px 4px 6px rgba(239,77,174, 0.4);
+	font-size:80px;
+	
+		/*text-shadow: -1.5px -1.5px 2px #666;
+		color: #222;
+		font-family: 'Ubuntu', sans-serif;
+		font-size: 80px;*/
+}
+
+h2.experienceText{
+	   /*color: #222;*/
+		font-family: 'Ubuntu', sans-serif;
+    /* Shadows are visible under slightly transparent text color 
+    color: rgba(0,134,121, 0.8);*/
+	color: rgba(239,77,174, 0.4);
+    text-shadow: 1px 4px 6px rgba(239,77,174, 0.2), 0 0 0 #000, 1px 4px 6px rgba(239,77,174, 0.2);
+}
+
+/* Don't show shadows when selecting text */
+::-moz-selection { background: #0c6F68; color: #fff; text-shadow: none; }
+::selection { background: #0c6F68; color: #fff; text-shadow: none;}
+
+
+.experience{
+	margin: 100px 0 100px 0;
+	background-color: #7b578c;	
+	text-align: right;
+	opacity:1;
+	font-family: 'Ubuntu', sans-serif;
+	/*background-image:url(/images/gridme.png);*/
+	background-image:url(bgs/gogglescat.png);
+	background-size: 100% 100%;
+	background-repeat:no-repeat;
+	-webkit-box-shadow: 0px 1px 12px rgba(50, 50, 50, 0.75);
+ 	-moz-box-shadow:    0px 1px 12px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 1px 12px rgba(50, 50, 50, 0.75);
+	/*
+	border-bottom: solid thick #1b7f77;
+	border-top: solid thick #1b7f77;*/
+}
+
+.experienceInner{
+	/*background-image:url(/images/gridme.png);
+	border-bottom: solid thick #1b7f77;
+	border-top: solid thick #1b7f77;*/
+	padding: 20px;
+	margin: 20px;
+	
+}
+
+
+.example{
+	margin: 50px 0 100px 0;
+	padding: 50px;
+	
+}
+
+.footer{
+	margin:100px 0 10px 0;	
+    background-color: #24aba0;	
+	opacity:1;
+	
+	background-image:url(images/grass.png);
+	background-position:bottom;
+	background-repeat:repeat-x;
+	border-top: solid thick #bdd53e;
+	-webkit-box-shadow: 0px 1px 12px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px 1px 12px rgba(50, 50, 50, 0.75);
+box-shadow:         0px 1px 12px rgba(50, 50, 50, 0.75);
+}
+
+.footerWidget.row{
+	padding: 50px;
+	background-color: transparent;	
+	font-family: 'Ubuntu', sans-serif;
+	
+	
+}
+
+.widget i{
+	color: #504261;
+
+}
+.credits{
+	background-color: #ffffff;
+	
+}
+
+.textHeading{
+	font-size: 12px;
+
+}
+
+.pageContent{
+	/*background-color: #ffffff;*/
+	padding: 15px;
+	opacity:.8;
+}
+
+.innerPageContent{
+	padding: 35px;
+	/*border: solid 1px #666666;	*/
+}
+
+.mainHomeSection{
+	margin-top: 100px;	
+}
+
+.workSectionBody{
+	padding: 20px;	
+}
+
+/* footer widget effects
+currenty not working */
+
+#ex3 {  
+	line-height: 0px; 
+	color: transparent; 
+	-webkit-transition: all 0.5s ease; 
+	-moz-transition: all 0.5s ease; 
+	-o-transition: all 0.5s ease; } 
+	
+#ex3 a:hover { 
+	line-height: 133px; 
+	color: #575858; } 
+	
+#ex3 span{ 
+	float: left; 
+	margin: 0 15px; } 
+
