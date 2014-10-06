@@ -7,8 +7,9 @@
 <![endif]-->
 <!-- Foundation 4 for IE 9 and earlier -->
 <!--[if gt IE 8]><!-->
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/foundation4/normalize.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/foundation4/foundation.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/normalize.css">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/foundation.css">
+    <script src="<?php echo get_template_directory_uri(); ?>/js/foundation3/modernizr.foundation.js"></script>
 <!--<![endif]-->
 
 <head>
@@ -57,7 +58,7 @@
 </script> -->
 
 <div class="contain-to-grid">
- <?php echo do_shortcode( '[responsive_slider]' ); ?>
+ <?php //echo do_shortcode( '[responsive_slider]' ); ?>
  
 <!-- Foundation 3 for IE 8 and earlier Solution thanks to this article: http://zurb.com/article/1204/getting-foundation-and-ie8-to-play-nice -->
 <!--[if lt IE 9]>

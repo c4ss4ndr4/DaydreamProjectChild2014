@@ -28,11 +28,21 @@
 
 <!-- Foundation 4 for IE 9 and later -->
 <!--[if gt IE 8]><!--><!--<![endif]-->
+ <script>
+      document.write('<script src=<?php echo get_template_directory_uri(); ?>/js/vendor/'
+        + ('__proto__' in {} ? 'zepto' : 'jquery')
+        + '.js><\/script>');
+    </script>
+
+  <script src="<?php echo get_template_directory_uri(); ?>/js/foundation/foundation.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/foundation/foundation.orbit.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/foundation/foundation.tooltips.js"></script>
+  <!-- Other JS plugins can be included here -->
+
    <script>
-	(function($) {
-		$(document).foundation();
-	})(jQuery);
-</script>
+   var $j = jQuery;
+   $j(document).foundation();
+	</script>
 
 <!-- Foundation 3 for IE 8 and earlier -->
 <!--[if lt IE 9]>
