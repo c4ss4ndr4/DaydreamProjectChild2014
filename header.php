@@ -58,7 +58,121 @@
 </script> -->
 
 <div class="contain-to-grid">
- <?php //echo do_shortcode( '[responsive_slider]' ); ?>
+
+<!-- grab the gallery categorized as slideshow -->
+<!-- this works but only returns thumbnail images -->
+<section class="container" role="slider">
+<!-- Foudnation Orbit Slider -->
+<div class="slideshow-wrapper">
+  <div class="preloader"></div>
+	<!-- Orbit Container -->
+	<ul data-orbit data-options="timer_speed:2500; bullets:false;">
+    	
+
+		<?php
+	
+	
+		// the query
+		$the_query = new WP_Query( 'category_name=slideshow'); 
+		
+		 if ( $the_query->have_posts() ) : ?>
+
+			<!-- the loop -->
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
+				if ( get_post_gallery() ) :
+            		$gallery = get_post_gallery( get_the_ID(), false );
+            
+            		/* Loop through all the image and output them one by one */
+					foreach( $gallery['src'] AS $src )
+					{
+						?>
+						
+						<li><img src="<?php echo $src; ?>" class="my-custom-class" alt="Gallery image" /></li>
+						
+					<?php
+					}
+					endif;
+					
+			 endwhile; ?>
+			<!-- end of the loop -->
+		
+
+			<?php wp_reset_postdata(); ?>
+        
+        <?php else : ?>
+            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+        <?php endif; ?>
+
+    
+  </ul><!-- close data-orbit -->
+  
+  </div>
+
+</section>
+
+		  
+ <?php 
+ /*function pw_show_gallery_image_urls( $content ) {
+
+ 	global $post;
+
+ 	// Only do this on singular items
+ 	if( ! is_singular() )
+ 		return $content;
+
+ 	// Make sure the post has a gallery in it
+ 	if( ! has_shortcode( $post->post_content, 'gallery' ) )
+ 		return $content;
+
+ 	// Retrieve the first gallery in the post
+ 	$gallery = get_post_gallery_images( $post );
+
+	$image_list = '<ul>';
+
+	// Loop through each image in each gallery
+	foreach( $gallery as $image ) {
+
+		$image_list .= '<li>' . $image . '</li>';
+
+	}
+
+	$image_list .= '</ul>';
+
+	// Append our image list to the content of our post
+	$content .= $image_list;
+
+ 	return $content;
+
+ }
+ add_filter( 'the_content', 'pw_show_gallery_image_urls' ); 
+ */
+ ?>
+ 
+ 
+ 
+ <section class="container" role="slider">
+<!-- Foudnation Orbit Slider -->
+<div class="slideshow-wrapper">
+  <div class="preloader"></div>
+
+<!-- Orbit Container -->
+
+  <ul data-orbit data-options="timer_speed:2500; bullets:false;">
+  	<li>
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/DaydreamProjectSpotlight1.png">
+      <!-- <div class="orbit-caption">Cat 1</div> -->
+    </li>
+    <li>
+      <img src="http://localhost:8888/wp-content/uploads/2013/09/CenterFleeSpotlight.png">
+      <div class="orbit-caption">Center Flee</div>
+    </li>
+    
+    
+  </ul>
+  
+  </div>
+
+</section>
  
 <!-- Foundation 3 for IE 8 and earlier Solution thanks to this article: http://zurb.com/article/1204/getting-foundation-and-ie8-to-play-nice -->
 <!--[if lt IE 9]>

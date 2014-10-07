@@ -4,36 +4,6 @@ Template Name: DD Home Full Width
 */
 get_header(); ?>
 
-<section class="container" role="slider">
-
-<div class="slideshow-wrapper">
-  <div class="preloader"></div>
-
-<!-- Orbit Container -->
-<div class="orbit-container" class="orbit-slides-container">
-  <ul data-orbit>
-    <li>
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cat-1.jpg">
-      <div class="orbit-caption">Cat 1</div>
-    </li>
-    <li class="active">
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cat-2.jpg">
-      <div class="orbit-caption">Cat 2</div>
-    </li>
-    <li>
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cat-3.jpg">
-      <div class="orbit-caption">Cat 3</div>
-    </li>
-    <li>
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/cat-4.jpg">
-      <div class="orbit-caption">Cat 4</div>
-    </li>
-  </ul>
-  
-  </div>
-
-</section>
-
 <!-- Start the main container -->
 <section class="container" role="document">
 	
