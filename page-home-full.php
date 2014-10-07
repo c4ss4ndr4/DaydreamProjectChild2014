@@ -153,10 +153,11 @@ get_header(); ?>
     <div class="small-12 large-12 columns" role="main">
     <div class="row">       
     
+    	<div class="carousel"> <!-- slick slider -->
 		  <?php
               $linksPosts = new WP_Query();
 			  //$linksPosts->query('post_type=page&post_parent=12&orderby=menu_order&order=DEC&post_number=3&posts_per_page=3'); //*Live
-              $linksPosts->query('post_type=page&post_parent=12&orderby=menu_order&order=DEC&post_number=3&posts_per_page=3'); //*Local
+              $linksPosts->query('post_type=page&post_parent=12&orderby=menu_order&order=DEC&post_number=3'); //*Local
           ?>
         
           
@@ -201,6 +202,7 @@ get_header(); ?>
             
              
   <?php endwhile; ?>
+  </div> <!-- end slick -->
   </div>
  </div>
  </div> <!-- end recent work Section -->

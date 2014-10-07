@@ -43,6 +43,9 @@
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Lobster|Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic|Ubuntu:400,400italic,300italic,300,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
     
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick/slick.css"/>
+    
 
 
 <?php wp_head(); ?>

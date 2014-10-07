@@ -37,12 +37,51 @@
   <script src="<?php echo get_template_directory_uri(); ?>/js/foundation/foundation.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/foundation/foundation.orbit.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/foundation/foundation.tooltips.js"></script>
+  <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick/slick.min.js"></script>
   <!-- Other JS plugins can be included here -->
 
    <script>
    var $j = jQuery;
    $j(document).foundation();
 	</script>
+    
+    <script type="text/javascript">
+		var $j = jQuery;
+        $j(document).ready(function(){
+            $j('.carousel').slick({
+			  infinite: false,
+			  speed: 300,
+			  slidesToShow: 4,
+			  slidesToScroll: 4,
+			  dots: true,
+			  responsive: [
+				{
+				  breakpoint: 1024,
+				  settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3,
+					infinite: true,
+					dots: true
+				  }
+				},
+				{
+				  breakpoint: 600,
+				  settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				  }
+				},
+				{
+				  breakpoint: 480,
+				  settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				  }
+				}
+			  ]
+            });
+        });
+    </script>
 
 <!-- Foundation 3 for IE 8 and earlier -->
 <!--[if lt IE 9]>
