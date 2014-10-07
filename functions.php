@@ -44,33 +44,4 @@ function reverie_entry_meta() {
 	//echo '<p><time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. sprintf(__('%s', 'reverie'), get_the_time('F jS, Y'), get_the_time()) .'</time></p>';
 }
 
-
-
-/* add any widget as in a shortcode 
-add_shortcode( 'widget', 'my_widget_shortcode' );
-function my_widget_shortcode( $atts ) {
-
-// Configure defaults and extract the attributes into variables
-extract( shortcode_atts( 
-	array( 
-		'type'  => '',
-		'title' => '',
-	), 
-	$atts 
-));
-
-$args = array(
-	'before_widget' => '<div class="box widget">',
-	'after_widget'  => '</div>',
-	'before_title'  => '<div class="widget-title">',
-	'after_title'   => '</div>',
-);
-
-ob_start();
-the_widget( $type, $atts, $args ); 
-$output = ob_get_clean();
-
-return $output;
-*/
-
 ?>

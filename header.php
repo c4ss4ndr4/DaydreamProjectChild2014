@@ -61,6 +61,7 @@
 
 <!-- grab the gallery categorized as slideshow -->
 <!-- this works but only returns thumbnail images -->
+<!-- need to add conditions for only on single and only if there is a gallery -->
 <section class="container" role="slider">
 <!-- Foudnation Orbit Slider -->
 <div class="slideshow-wrapper">
@@ -74,12 +75,19 @@
 	
 		// the query
 		$the_query = new WP_Query( 'category_name=slideshow'); 
+    <!-- Orbit Container -->
+	<ul data-orbit data-options="timer_speed:2500; bullets:false;">
+    
+    <?php
+    	$the_query = new WP_Query( 'category_name=slideshow'); 
 		
 		 if ( $the_query->have_posts() ) : ?>
 
 			<!-- the loop -->
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
 				if ( get_post_gallery() ) :
+					
+					if ( get_post_gallery() ) :
             		$gallery = get_post_gallery( get_the_ID(), false );
             
             		/* Loop through all the image and output them one by one */
@@ -88,10 +96,17 @@
 						?>
 						
 						<li><img src="<?php echo $src; ?>" class="my-custom-class" alt="Gallery image" /></li>
+                        $image_list = '<li>';
+                        $image_list .= '<img src=" ' . str_replace('-150x150','', $src) . ' " />';
+						$image_list .= '</li>';
 						
 					<?php
+						echo $image_list;
 					}
 					endif;
+					
+				
+				endif;
 					
 			 endwhile; ?>
 			<!-- end of the loop -->
