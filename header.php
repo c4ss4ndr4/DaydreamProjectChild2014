@@ -71,9 +71,18 @@
 	
     <!-- Orbit Container -->
 	<ul data-orbit data-options="timer_speed:2500; bullets:false;">
+    <li class="active">
+    <img src="http://daydreamproject.com/portfolio/wp-content/uploads/DaydreamProjectSpotlight11.png" alt="slide 1" />
+  	</li>
+    <li>
+    <img src="http://daydreamproject.com/portfolio/wp-content/uploads/CenterFleeSpotlight.png" alt="slide 2" />
+    <div class="orbit-caption">
+      Center Flee
+    </div>
+  	</li>
     
     <?php
-    	$the_query = new WP_Query( 'category_name=slideshow'); 
+    	/*$the_query = new WP_Query( 'category_name=ddslideshow'); 
 		
 		 if ( $the_query->have_posts() ) : ?>
 
@@ -81,14 +90,14 @@
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
 					
 					if ( get_post_gallery() ) :
-            		$gallery = get_post_gallery( get_the_ID(), false );
+            		$gallery = get_post_gallery( $the_query->ID, false );
             
             		/* Loop through all the image and output them one by one */
-					foreach( $gallery['src'] AS $src )
+					/*foreach( $gallery['src'] AS $src )
 					{
 						
                         $image_list = '<li>';
-                        $image_list .= '<img src=" ' . str_replace('-150x150','', $src) . ' " />';
+                        $image_list .= '<img src="$src" />';
 						$image_list .= '</li>';
 						
 						echo $image_list;
@@ -105,7 +114,7 @@
         
         <?php else : ?>
             <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-        <?php endif; ?>
+        <?php endif; */?>
 
     
   </ul><!-- close data-orbit -->
