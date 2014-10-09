@@ -10,8 +10,6 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/normalize.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/foundation.css">
     <script src="<?php echo get_template_directory_uri(); ?>/js/foundation3/modernizr.foundation.js"></script>
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/parallax/css/main.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/parallax/css/nornalize.css">
 <!--<![endif]-->
 
 <head>

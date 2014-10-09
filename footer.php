@@ -40,8 +40,6 @@
   <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick/slick.min.js"></script>
   
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/parallax/js/skrollr.js"></script>
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/parallax/js/_main.js"></script>
-    <script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri(); ?>/parallax/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
   <!-- Other JS plugins can be included here -->
 
    <script>
