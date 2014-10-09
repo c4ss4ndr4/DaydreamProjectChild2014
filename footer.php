@@ -38,6 +38,10 @@
   <script src="<?php echo get_template_directory_uri(); ?>/js/foundation/foundation.orbit.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/foundation/foundation.tooltips.js"></script>
   <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick/slick.min.js"></script>
+  
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/parallax/js/skrollr.js"></script>
+	<script src="<?php echo get_stylesheet_directory_uri(); ?>/parallax/js/_main.js"></script>
+    <script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri(); ?>/parallax/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
   <!-- Other JS plugins can be included here -->
 
    <script>
@@ -83,6 +87,19 @@
             });
         });
     </script>
+    
+    <script>
+	var $j = jQuery;
+    ( function( $j ) {
+    // Init Skrollr
+    var s = skrollr.init({
+        render: function(data) {
+            //Debugging - Log the current scroll position.
+            //console.log(data.curTop);
+        }
+    });
+	} )( jQuery );
+	</script>
 
 <!-- Foundation 3 for IE 8 and earlier -->
 <!--[if lt IE 9]>

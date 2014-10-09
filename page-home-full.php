@@ -114,12 +114,91 @@ get_header(); ?>
   </div>
  </div>
 </section> <!-- end skills section -->
+
+<!-- parallax examples 
+<style>
+/* CSS */
+.hsContainer {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+}
+.hsContent {
+    max-width: 450px;
+    margin: -150px auto 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+    color: #ebebeb;
+    padding: 0 8%;
+    text-align: center
+}
+.bcg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.curtainContainer {
+    width: 100%; height: 100%;
+    position: relative;
+}
+.curtainContainer .curtain {
+    width: 300%; height: 1px;
+    background-color: #000000;
+    position: absolute; top: 25%; left: 0;
+    opacity: 0
+}
+.curtainContainer .copy {
+    position: absolute;
+    bottom: 30%; left: 0;
+    width: 100%; text-align: center;
+}
+/* Slide 1 */
+#slide-4 .bcg {background-image:url('<?php //echo get_stylesheet_directory_uri(); ?>/img/cat-1.jpg')}
+</style> -->
+
+<!-- HTML -->
+<!-- 
+<section id="slide-4" class="homeSlide homeSlideTall">
+    <div class="experience"
+        data-center="background-position: 50% 0px;"
+        data-bottom-top="background-position: 50% 100px;"
+        data-top-bottom="background-position: 50% -100px;"
+        data-anchor-target="#slide-4"
+    >
+        <div class="curtainContainer">
+            <div class="curtain"
+                data-bottom-top="opacity: 0"
+                data-106-top="height: 1%; top: -10%; opacity: 0;"
+                data-center="height: 100%; top: 0%; opacity: 0.5"
+                data-anchor-target="#slide-4"
+            ></div>
+            <div class="copy"
+                data-bottom-top="opacity: 0"
+                data--100-bottom="opacity: 0"
+                data--280-bottom="opacity: 1;"
+                data-280-top="opacity: 1;"
+                data-106-top="opacity: 0;"
+                data-anchor-target="#slide-4 .copy"
+            >
+                <h2>Curtain effect while you scroll</h2>
+            </div>
+ 
+        </div>
+    </div>
+</section> -->
+
   
-  
-<section class="experience" role="document">
-<div class="row">
+<section class="experience" role="document" data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -150px;" data-bottom-top="background-position: 50% 150px;">
+<div data-100-bottom="opacity: 0" data-50-bottom="opacity: 1;" class="row">
  <div class="small-12 large-12 columns" role="main">
- <div class="row">
+ <div class="row" style="height: 900px;">
 
 	
 	<?php /* Start loop */ ?>
