@@ -39,6 +39,7 @@
   <script src="<?php echo get_template_directory_uri(); ?>/js/foundation/foundation.tooltips.js"></script>
   <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/slick/slick/slick.min.js"></script>
   
+  <!--parallax js script -->
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/parallax/js/skrollr.js"></script>
   <!-- Other JS plugins can be included here -->
 
