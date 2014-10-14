@@ -41,6 +41,7 @@
   
   <!--parallax js script -->
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/parallax/js/skrollr.js"></script>
+    <div id="skrollr-body"></div>
   <!-- Other JS plugins can be included here -->
 
    <script>
@@ -87,16 +88,15 @@
         });
     </script>
     
+    <!-- initialize skrollr -->
     <script>
 	var $j = jQuery;
     ( function( $j ) {
-    // Init Skrollr
-    var s = skrollr.init({
-        render: function(data) {
-            //Debugging - Log the current scroll position.
-            //console.log(data.curTop);
-        }
-    });
+		if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+    		skrollr.init({
+        	forceHeight: false
+    		});
+		}
 	} )( jQuery );
 	</script>
 
