@@ -81,7 +81,8 @@
 	        	<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 	        </li>
 			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-			<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+			<!-- this is disabled both the Menu icon and the word menu have been deleted -->
+			<li class="toggle-topbar"><a href="#"><span></span></a></li>
 	    </ul>
 	    <section class="top-bar-section">
 	    <?php

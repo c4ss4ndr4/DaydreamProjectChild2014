@@ -23,7 +23,7 @@ get_header("page"); ?>
           <?php while ($linksPosts->have_posts()) : $linksPosts->the_post(); ?>
          
             <?php 
-			echo '<div class="small-12 large-12 columns twelve">';
+			//echo '<div class="small-12 large-12 columns twelve">';
               echo the_content('Read more...');
              echo '</div>';
 			 ?>
