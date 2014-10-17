@@ -12,7 +12,6 @@ get_header("page"); ?>
 
 <section class="" role="document">
 	<div class="small-12 large-12 columns innerPageContent" role="main">
-	<div class="small-12 large-12 columns" role="main">
     <div class="row">       
 		  <?php
               $linksPosts = new WP_Query();
@@ -23,7 +22,7 @@ get_header("page"); ?>
           <?php while ($linksPosts->have_posts()) : $linksPosts->the_post(); ?>
          
             <?php 
-			//echo '<div class="small-12 large-12 columns twelve">';
+			echo '<div class="small-12 large-12 columns twelve">';
               echo the_content('Read more...');
              echo '</div>';
 			 ?>
@@ -85,8 +84,7 @@ get_header("page"); ?>
             
              
   <?php endwhile; ?>
-  </div>
- </div>
+  	</div>
 	</div>
   </section>
 		
